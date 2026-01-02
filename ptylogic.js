@@ -24,7 +24,6 @@ const ptyProcess = pty.spawn(command, args, {
   // env: process.env,       // Passes PATH and other critical variables
 });
 
-// ptyProcess.write(data);
 
 ptyProcess.onData((data) => {
     socket.emit("terminal-output", data);
